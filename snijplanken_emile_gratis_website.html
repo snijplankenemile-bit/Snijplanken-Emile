@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Snijplanken Emile — Handgemaakte Snijplanken</title>
+  <meta name="description" content="Snijplanken Emile — duurzame handgemaakte snijplanken van hout. Gratis website template om direct te publiceren.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#faf9f7; --card:#ffffff; --accent:#2b7a78; --muted:#6b7179; --radius:14px;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:#17202a;background:var(--bg);margin:0;padding:24px;display:flex;justify-content:center}
+    .container{max-width:var(--max-width);width:100%}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#5aa7a4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-bottom:30px}
+    .hero-card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(18,24,26,0.06)}
+    h1{margin:0 0 10px;font-size:28px}
+    p.lead{margin:0 0 18px;color:var(--muted)}
+    .cta{display:inline-block;padding:12px 18px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+    .features{display:flex;gap:12px;margin-top:12px}
+    .feature{background:rgba(43,122,120,0.08);padding:10px;border-radius:10px;font-weight:600}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(18,24,26,0.04)}
+    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .product{padding:12px;border-radius:10px;text-align:center}
+    .product img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    footer{margin-top:28px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .gallery,.product-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      body{padding:14px}
+      .gallery,.product-grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+    /* lightbox */
+    .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:50}
+    .lightbox img{max-width:95%;max-height:85%;border-radius:10px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">E</div>
+        <div>
+          <div style="font-weight:700">Snijplanken Emile</div>
+          <div style="font-size:13px;color:var(--muted)">Handgemaakte & duurzame snijplanken</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#producten">Producten</a>
+        <a href="#over">Over</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Unieke handgemaakte snijplanken — rechtstreeks van Emile</h1>
+        <p class="lead">Sterk, stijlvol en duurzaam. Perfect als cadeau of voor dagelijks gebruik. Houtsoorten: eik, esdoorn en walnoot. Gratis verzending vanaf €50 in Nederland en België.</p>
+        <a class="cta" href="#producten">Bekijk producten</a>
+        <div class="features">
+          <div class="feature">Gratis verzending</div>
+          <div class="feature">Ecologisch hout</div>
+          <div class="feature">Maatwerk beschikbaar</div>
+        </div>
+
+        <h3 style="margin-top:18px">Waarom kiezen voor Emile?</h3>
+        <ul style="color:var(--muted);line-height:1.6">
+          <li>Handgemaakt in kleine oplages</li>
+          <li>Geolied met voedselveilige olie</li>
+          <li>Reparatie- & onderhoudsadvies inbegrepen</li>
+        </ul>
+      </div>
+
+      <aside style="padding:14px;border-radius:var(--radius);display:flex;flex-direction:column;gap:12px;">
+        <div style="background:linear-gradient(120deg,#fff,#f7f6f5);padding:12px;border-radius:12px;box-shadow:0 8px 24px rgba(18,24,26,0.06)">
+          <strong>Populaire keuze</strong>
+          <div style="font-size:14px;color:var(--muted)">Walnoot Chef - €69</div>
+          <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Walnoot snijplank" style="width:100%;height:160px;object-fit:cover;border-radius:8px;margin-top:10px">
+          <a class="cta" href="#contact" style="display:block;text-align:center;margin-top:10px">Bestel maatwerk</a>
+        </div>
+
+        <div class="card">
+          <strong>Snelle levering</strong>
+          <p style="margin:6px 0;color:var(--muted);font-size:14px">Verzending binnen 2–5 werkdagen in Nederland & België.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="producten">
+      <h2>Onze snijplanken</h2>
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="card product">
+          <img src="https://images.unsplash.com/photo-1514995669114-8b3d0d6f1a20?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Eiken plank">
+          <h3>Eiken Classic</h3>
+          <p style="color:var(--muted)">Groot, robuust en tijdloos — €59</p>
+          <a class="cta" href="#contact" style="display:inline-block;margin-top:8px;padding:8px 12px">Bestel</a>
+        </div>
+        <!-- Product 2 -->
+        <div class="card product">
+          <img src="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Walnoot plank">
+          <h3>Walnoot Chef</h3>
+          <p style="color:var(--muted)">Elegante donkere plank — €69</p>
+          <a class="cta" href="#contact" style="display:inline-block;margin-top:8px;padding:8px 12px">Bestel</a>
+        </div>
+        <!-- Product 3 -->
+        <div class="card product">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Esdoorn plank">
+          <h3>Esdoorn Light</h3>
+          <p style="color:var(--muted)">Licht van kleur, strak ontwerp — €49</p>
+          <a class="cta" href="#contact" style="display:inline-block;margin-top:8px;padding:8px 12px">Bestel</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" style="margin-top:22px">
+      <h2>Galerij</h2>
+      <div class="gallery">
+        <div class="card"><img onclick="openLightbox(this)" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="plaat1"></div>
+        <div class="card"><img onclick="openLightbox(this)" src="https://images.unsplash.com/photo-1512813195386-6cf811ad3542?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="plaat2"></div>
+        <div class="card"><img onclick="openLightbox(this)" src="https://images.unsplash.com/photo-1542444459-db6d9ae3f3a3?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="plaat3"></div>
+        <div class="card"><img onclick="openLightbox(this)" src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="plaat4"></div>
+        <div class="card"><img onclick="openLightbox(this)" src="https://images.unsplash.com/photo-1523264753634-12ff6f1f6f59?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="plaat5"></div>
+        <div class="card"><img onclick="openLightbox(this)" src="https://images.unsplash.com/photo-1532634726-8b9fb99825f8?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="plaat6"></div>
+      </div>
+    </section>
+
+    <section id="over" style="margin-top:22px">
+      <h2>Over Emile</h2>
+      <div class="card" style="padding:18px">
+        <p style="color:var(--muted)">Emile maakt sinds 2015 handgemaakte snijplanken met aandacht voor duurzaamheid en afwerking. Elk stuk wordt geschuurd en geolied met voedselveilige olie. Voor maatwerk neemt u contact op via het formulier.</p>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <h2>Contact & Bestellen</h2>
+      <div class="card" style="display:flex;gap:18px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px">
+          <p style="color:var(--muted)">Vul het formulier in of stuur een e-mail. Vermeld productnaam, gewenste afmetingen en adres voor verzending.</p>
+          <p><strong>Email:</strong> <a href="mailto:emile@snijplanken.nl">emile@snijplanken.nl</a></p>
+          <p><strong>Telefoon:</strong> +31 6 12 34 56 78</p>
+        </div>
+        <form style="flex:1;min-width:260px" onsubmit="onFormSubmit(event)">
+          <label style="display:block;margin-bottom:6px">Naam</label>
+          <input id="name" required style="width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid #e4e7e8">
+          <label style="display:block;margin-bottom:6px">Email</label>
+          <input id="email" type="email" required style="width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid #e4e7e8">
+          <label style="display:block;margin-bottom:6px">Bericht (product + maat)</label>
+          <textarea id="message" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e4e7e8;min-height:100px"></textarea>
+          <button class="cta" type="submit" style="border:none;margin-top:8px">Verstuur</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Snijplanken Emile</div>
+      <div><a href="#over" style="text-decoration:none;color:var(--muted)">Algemene voorwaarden</a></div>
+    </footer>
+  </div>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()"><img id="lightImg" src="" alt=""></div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function openLightbox(img){
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightImg').src = img.src;
+      lb.style.display = 'flex';
+    }
+    function closeLightbox(){ document.getElementById('lightbox').style.display = 'none'; }
+
+    function onFormSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      // Simpele mailto-besturing: opent e-mailclient van gebruiker
+      const subject = encodeURIComponent('Bestelling / Vraag van ' + name);
+      const body = encodeURIComponent('Naam: ' + name + '\nEmail: ' + email + '\n\nBericht:\n' + message);
+      window.location.href = 'mailto:emile@snijplanken.nl?subject=' + subject + '&body=' + body;
+    }
+  </script>
+
+  <!--
+    INSTRUCTIES:
+    1) Download dit bestand als index.html en zet het op een gratis host zoals GitHub Pages of Netlify.
+    2) Pas teksten en e-mail/telefoon aan (zoek naar emile@snijplanken.nl in deze file).
+    3) Vervang de Unsplash-afbeeldingen door eigen foto's (zelfde <img> src attribuut).
+    4) Voor maatwerk: voeg een betaal-link of betaalpagina toe (Mollie/Stripe) als je wilt.
+  -->
+</body>
+</html>
